@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+1
+{% endblock %}
+
+{% block body %}
+<form enctype="multipart/form-data" method="post" action="{% url 'firstpage' %}">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="csvfile">
+</form>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+2
+{% endblock %}
+
+{% block body %}
+<table>
+    <tr>
+        {% for i in table1 %}
+            <td>{{ i }}</td>
+        {% endfor %}
+    </tr>
+</table>
+
+<table>
+    <tr>
+        {% for i in table2 %}
+            {% if i == None %}
+                <td></td>
+            {% else %}
+                <td>{{ i }}</td>
+            {% endif %}
+        {% endfor %}
+    </tr>
+</table>
+
+<table>
+    <tr>
+        {% for i in table3 %}
+            <td>{{ i }}</td>
+        {% endfor %}
+    </tr>
+</table>
+{% endblock %}
